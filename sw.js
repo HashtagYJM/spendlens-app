@@ -7,7 +7,8 @@
 // make an already-visited install work offline and to survive a reload.
 // Never touches cross-origin requests — local-first, no third-party calls.
 
-const CACHE_NAME = "spendlens-shell-v1";
+// Cache-first includes index.html, so bump this on every deploy or installed phones keep the old build.
+const CACHE_NAME = "spendlens-shell-v2";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
